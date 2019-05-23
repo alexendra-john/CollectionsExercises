@@ -18,6 +18,8 @@ public class Student {
 
     private ArrayList<Integer> grades = new ArrayList<>();
 
+    private HashMap<String, String> attendance = new HashMap<>();
+
     public Student(String studentName) {
         this.studentName = studentName;
     }
@@ -55,6 +57,10 @@ public class Student {
         alexendra.addGrade(69);
 
         System.out.println(john.getGradeAverage());
+    }
+
+    public void recordAttendance(String date, String value) {
+        attendance.put(date, value);
     }
 
 
