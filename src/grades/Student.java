@@ -38,6 +38,12 @@ public class Student {
         }
         return numOfGrades / grades.size();
     }
+//    Returns array of grades
+
+
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
 
     public static void main(String[] args) {
         Student john = new Student("John");

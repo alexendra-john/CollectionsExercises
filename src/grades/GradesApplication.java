@@ -10,14 +10,17 @@ package grades;
 Be creative! Make up github usernames and grades for your student objects.
 */
 
-import java.util.HashMap;
-import java.util.Objects;
-import java.util.Arrays;
+//import java.util.HashMap;
+import java.util.*;
+//import java.util.Objects;
+//import java.util.Arrays;
 
 import static grades.NameGenerator.nameGenerator;
 
-public class GradesApplication {
+public class GradesApplication implements CommandLine {
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
 
         HashMap<String, Student> userNames = new HashMap<>();
 
@@ -61,14 +64,54 @@ public class GradesApplication {
             student.addGrade(gNum2);
             userNames.put(key, student);
         }
-
+//      Start of part 3 of exercise. Loop through hashmap array and print out user names.
         for (String nameKey: userNames.keySet() ){
             System.out.println(userNames.get(nameKey).getName());
-            System.out.println(userNames.get(nameKey).getGradeAverage());
+            //System.out.println(userNames.get(nameKey).getGradeAverage());
         }
+//      Prompt user for a username to pull information from
+        System.out.println("Which student they would like to see more information about?");
+        String userName = input.nextLine();
+        //studentInfo(usrName,userNames );
+//        for (String nameKey: userNames.keySet() ){
+//
+//            if (userName.equals(userNames.get(nameKey).getName())) {
+//                System.out.println(userNames.get(nameKey).getName());
+//                System.out.println(userNames.get(nameKey).getGrades());
+//                System.out.println(userNames.get(nameKey).getGradeAverage());
+//            }
+//            //System.out.println(userNames.get(nameKey).getName());
+//            //System.out.println(userNames.get(nameKey).getGradeAverage());
+//        }
 
-
+        studentInfo(userName, userNames);
 
     }
 
+    //@Override
+    public static void studentInfo(String getName,HashMap<String,Student> users ) {
+//        int x = 0;
+//            Student user = (Student)users.get(getName);
+//            String userName = user.getName();
+//           ArrayList gradesList= user.getGrades();
+//            double gradeAverage = user.getGradeAverage();
+//
+//           for(Object grade: gradesList){
+//               x++;
+//               System.out.println("Grade # "+ x + " : "+ grade);
+//           }
+//
+//        System.out.println(gradeAverage);
+//        return null;
+        for (String nameKey: users.keySet()){
+
+            if (getName.equals(users.get(nameKey).getName())) {
+                System.out.println(users.get(nameKey).getName());
+                System.out.println(users.get(nameKey).getGrades());
+                System.out.println(users.get(nameKey).getGradeAverage());
+            }
+            //System.out.println(userNameuserss.get(nameKey).getName());
+            //System.out.println(userNames.get(nameKey).getGradeAverage());
+        }
+    }
 }

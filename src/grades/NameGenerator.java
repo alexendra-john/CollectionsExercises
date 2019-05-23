@@ -64,9 +64,8 @@ dedicated-photon
         noun = nouns[rando];
         rando = (int) (Math.random()*nameCount);
         name = names[rando];
-        String genName =
-                "You shall now and forever be known as: "+ name + " the " + adj + "-" + noun;
-        System.out.println(genName);
+        String genName = "You shall now and forever be known as: "+ name + " the " + adj + "-" + noun;
+//        System.out.println(genName);
         // }
         return name + " the " + adj + "-" + noun;
     };
