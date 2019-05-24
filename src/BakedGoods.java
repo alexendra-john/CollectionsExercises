@@ -13,7 +13,7 @@ public class BakedGoods {
         this.products = products;
     }
 
-    public void callBakedList(){
+    public static void callBakedList(){
         String[] products={
                 "Biscuit ",
                 "Bread",

@@ -13,7 +13,7 @@ public class Dairy {
         this.products = products;
     }
 
-    public void callDairyList(){
+    public static void callDairyList(){
         String[] products={
                 "Fermented milk",
                 "Yogurt",

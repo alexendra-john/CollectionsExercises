@@ -14,7 +14,7 @@ public class Produce {
         this.produceList = produceList;
     }
 
-    public void callProduceList() {
+    public static void callProduceList() {
 
         String[] produceList = {
                 "Alfalfa sprouts",
