@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class GroceryList {
@@ -13,6 +14,12 @@ public class GroceryList {
         String response = sc.nextLine();
 
         groceryLoop(response,sc,grocery);
+
+        Collections.sort(grocery);
+
+        for(String str: grocery){
+            System.out.println(str);
+        }
 
     }
 
